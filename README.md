@@ -28,11 +28,7 @@ Students often struggle to understand complex concepts while studying. Searching
 
 ## 🖥️ Demo
 
-> Add your own screenshot or GIF here once deployed — e.g. `docs/screenshot.png`.
->
-> ```markdown
-> docs/screenshot.png
-> ```
+![Study Buddy demo](docs/screenshot.png)
 
 ## 🛠️ Tech Stack
 
