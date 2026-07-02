@@ -6,14 +6,6 @@ A single-file Streamlit app that helps students:
   2. Summarize long study notes into key points
   3. Generate quizzes (MCQs) on demand
   4. Generate flashcards on demand
-
-Powered by the Groq API (free, no credit card required) using the
-OpenAI-compatible SDK.
-
-Run locally:
-    streamlit run app.py
-
-Author: Built with Claude
 """
 
 import json
