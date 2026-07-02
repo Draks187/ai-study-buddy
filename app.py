@@ -24,9 +24,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from pypdf import PdfReader
 
-# --------------------------------------------------------------------------
 # Setup
-# --------------------------------------------------------------------------
 
 load_dotenv()
 
@@ -40,7 +38,6 @@ st.set_page_config(
 # Get a free key at https://console.groq.com/keys
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
-
 
 def get_client() -> OpenAI:
     """Create an OpenAI-compatible client pointed at Groq, using the key
@@ -118,10 +115,7 @@ def get_input_text(label_prefix: str, key_prefix: str) -> str:
                 st.text(text[:3000] + ("..." if len(text) > 3000 else ""))
     return text
 
-
-# --------------------------------------------------------------------------
 # Sidebar — API key & model settings
-# --------------------------------------------------------------------------
 
 with st.sidebar:
     st.title("📚 Study Buddy")
@@ -161,9 +155,8 @@ with st.sidebar:
     st.caption("Built with Streamlit + OpenAI API")
 
 
-# --------------------------------------------------------------------------
 # Main tabs
-# --------------------------------------------------------------------------
+
 
 st.title("🎓 AI-Powered Study Buddy")
 st.write(
@@ -175,7 +168,7 @@ tab_explain, tab_summarize, tab_quiz, tab_flashcards = st.tabs(
     ["🧠 Explain a Concept", "📝 Summarize Notes", "❓ Generate Quiz", "🗂️ Flashcards"]
 )
 
-# ---------------------------- Tab 1: Explain --------------------------------
+# Tab 1: Explain 
 with tab_explain:
     st.subheader("Explain a complex concept in simple terms")
 
@@ -217,7 +210,7 @@ with tab_explain:
                 result = call_openai(system_prompt, user_prompt)
             st.markdown(result)
 
-# ---------------------------- Tab 2: Summarize ------------------------------
+# Tab 2: Summarize 
 with tab_summarize:
     st.subheader("Summarize your study notes")
 
@@ -244,7 +237,7 @@ with tab_summarize:
                 result = call_openai(system_prompt, user_prompt)
             st.markdown(result)
 
-# ---------------------------- Tab 3: Quiz -----------------------------------
+# Tab 3: Quiz 
 with tab_quiz:
     st.subheader("Generate a quiz on demand")
 
@@ -315,7 +308,7 @@ with tab_quiz:
                 )
             st.success(f"Score: {score} / {len(quiz_questions)}")
 
-# ---------------------------- Tab 4: Flashcards -----------------------------
+# Tab 4: Flashcards
 with tab_flashcards:
     st.subheader("Generate flashcards")
 
