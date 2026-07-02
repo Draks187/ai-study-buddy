@@ -96,9 +96,9 @@ Every push to `main` automatically redeploys the live app.
 ai-study-buddy/
 ├── app.py              # Main Streamlit app — all 4 features live here
 ├── requirements.txt    # Python dependencies
-├── .env.example         # Template for your local environment variables
-├── .gitignore           # Keeps .env and other local files out of git
-├── LICENSE               # MIT license
+├── .env.example        # Template for your local environment variables
+├── .gitignore          # Keeps .env and other local files out of git
+├── LICENSE             # MIT license
 └── README.md
 ```
 
